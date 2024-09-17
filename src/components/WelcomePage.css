@@ -1,0 +1,67 @@
+/* Container for the welcome screen, centers content both vertically and horizontally */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #ffffff; /* White background color */
+  position: relative;
+  overflow: hidden; /* Ensures that no content overflows the container */
+}
+
+/* Adds a decorative circular background at the bottom of the container */
+.welcome-container:before {
+  content: '';
+  position: absolute;
+  bottom: -50px; /* Positioned slightly off-screen at the bottom */
+  width: 150%; /* Extends beyond the container width */
+  height: 300px; /* Height of the decorative element */
+  background-color: #00F0D3; /* Light teal color */
+  border-radius: 50%; /* Creates a circular shape */
+  z-index: 0; /* Places this element behind the main content */
+}
+
+/* Styles for the content inside the welcome container */
+.welcome-content {
+  text-align: center; /* Centers the text and other content */
+  z-index: 1; /* Ensures the content is above the decorative background */
+}
+
+/* Styles for the logo image */
+.logo {
+  width: 180px; /* Width of the logo */
+  height: 250px; /* Height of the logo */
+}
+
+/* Styles for the main heading (h1) */
+h1 {
+  font-size: 28px; /* Size of the heading text */
+  font-weight: bold; /* Makes the heading text bold */
+  color: #4A3D57; /* Dark purple color for the heading */
+  margin-top: 30px; /* Space above the heading */
+}
+
+/* Styles for the paragraph text */
+p {
+  font-size: 18px; /* Size of the paragraph text */
+  color: #4A3D57; /* Dark purple color for the text */
+  margin-top: 10px; /* Space above the paragraph */
+}
+
+/* Styles for the welcome button */
+.welcome-button {
+  background-color: #faf8f5; /* Light background color for the button */
+  font-size: 18px; /* Size of the button text */
+  font-weight: bold; /* Makes the button text bold */
+  padding: 15px 30px; /* Padding inside the button */
+  border: none; /* Removes the border */
+  border-radius: 20px; /* Rounds the corners of the button */
+  margin-top: 170px; /* Space above the button */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  z-index: 1; /* Ensures the button is above the decorative background */
+}
+
+/* Changes the background color of the button on hover */
+.welcome-button:hover {
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+}

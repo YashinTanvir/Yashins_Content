@@ -1,0 +1,147 @@
+/* Container for the rooms page, sets the overall layout and background */
+.rooms-page {
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to right, #61DBCC, #ffffff); /* Gradient background */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers children horizontally */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Styles for the main heading of the rooms page */
+.rooms-page h1 {
+    margin-top: 14px; /* Space above the heading */
+    font-size: 20px; /* Font size of the heading */
+    color: #4A3D57; /* Dark purple text color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Container for the list of rooms */
+.rooms-list {
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Maximum width for the container */
+    margin-bottom: 20px; /* Space below the list */
+    margin-right: 35px; /* Space to the right of the list */
+}
+
+/* Styles for each individual room item in the list */
+.room-item {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers children vertically */
+    padding: 10px; /* Padding inside the room item */
+    margin-bottom: 10px; /* Space below each room item */
+    background-color: white; /* White background for the room item */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling transition on hover */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+/* Hover effect for room items, slightly scales the item */
+.room-item:hover {
+    transform: scale(1.02); /* Scales the item by 2% on hover */
+}
+
+/* Styles for the room icon inside each room item */
+.room-icon {
+    width: 50px; /* Width of the icon */
+    height: 50px; /* Height of the icon */
+    border-radius: 10px; /* Rounded corners for the icon */
+    margin-right: 15px; /* Space to the right of the icon */
+}
+
+/* Styles for the room name text inside each room item */
+.room-item span {
+    font-size: 18px; /* Font size of the room name */
+    font-weight: 500; /* Medium weight font */
+    color: #333; /* Dark gray text color */
+    flex-grow: 1; /* Allows the room name to take up available space */
+}
+
+/* Styles for the delete icon inside each room item */
+.delete-icon {
+    width: 20px; /* Width of the delete icon */
+    height: 20px; /* Height of the delete icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    position: absolute; /* Positioned inside the room item */
+    right: 10px; /* Positioned to the far right */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease-in-out; /* Smooth fade-in transition */
+}
+
+/* Shows the delete icon when hovering over the room item */
+.room-item:hover .delete-icon {
+    opacity: 1; /* Makes the delete icon visible on hover */
+}
+
+/* Styles for the proceed button at the bottom of the rooms list */
+.proceed-button {
+    padding: 15px 30px; /* Padding inside the button */
+    background-color: #26A69A; /* Teal background color */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size of the button text */
+    font-weight: bold; /* Bold font weight */
+    border: none; /* Removes border */
+    border-radius: 30px; /* Fully rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Maximum width for the button */
+}
+
+/* Changes background color of the proceed button on hover */
+.proceed-button:hover {
+    background-color: #1e857c; /* Darker teal color on hover */
+}
+
+/* Container for the create new room section */
+.create-room-container {
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Maximum width for the container */
+    margin-top: 20px; /* Space above the container */
+    text-align: center; /* Centers the text and input inside */
+}
+
+/* Styles for the input field to create a new room */
+.new-room-input {
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 10px; /* Space below the input */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 20px; /* Rounded corners */
+    outline: none; /* Removes the default outline */
+    text-align: center; /* Centers the text inside the input */
+    font-size: 16px; /* Font size of the input text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styles for the create room button */
+.create-room-button {
+    padding: 15px 30px; /* Padding inside the button */
+    background-color: #26A69A; /* Teal background color */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size of the button text */
+    font-weight: bold; /* Bold font weight */
+    border: none; /* Removes border */
+    border-radius: 30px; /* Fully rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    width: 100%; /* Full width of the container */
+}
+
+/* Changes background color of the create room button on hover */
+.create-room-button:hover {
+    background-color: #1e857c; /* Darker teal color on hover */
+}
+
+/* Styles for the back icon to return to the previous page */
+.back-room-icon {
+    width: 24px; /* Width of the back icon */
+    height: 24px; /* Height of the back icon */
+    position: absolute; /* Positioned inside the rooms page */
+    left: 20px; /* Positioned to the far left */
+    margin-top: 14px; /* Aligns the icon vertically */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}

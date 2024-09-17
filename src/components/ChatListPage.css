@@ -1,0 +1,177 @@
+/* Setting the full height of the chat list page and applying a gradient background */
+.chat-list-page {
+  height: 100vh;
+  background: linear-gradient(to right, #61DBCC, #ffffff);
+  display: flex;
+  flex-direction: column; /* Arranging elements in a column */
+}
+
+/* Styling the top bar with padding, centering, and positioning */
+.top-bar {
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Aligning elements vertically */
+  align-items: center;
+  color: #000; /* Setting text color to black */
+  position: relative; /* Allowing absolute positioning of child elements */
+  margin-top: 15px; /* Adding space at the top */
+}
+
+/* Styling the back icon on the top bar */
+.back-list-icon {
+  width: 24px; /* Setting the width of the icon */
+  height: 24px; /* Setting the height of the icon */
+  position: absolute; /* Positioning the icon absolutely within the top bar */
+  left: 20px; /* Positioning the icon 20px from the left */
+  margin-top: 5px; /* Adding slight space above the icon */
+  cursor: pointer; /* Changing cursor to pointer on hover */
+}
+
+/* Styling the title in the top bar */
+.title {
+  font-size: 24px; /* Setting the font size */
+  margin: 0; /* Removing default margin */
+  margin-bottom: 20px; /* Adding space below the title */
+}
+
+/* Styling the edit icon on the top bar */
+.edit-icon {
+  width: 24px; /* Setting the width of the icon */
+  height: 24px; /* Setting the height of the icon */
+  position: absolute; /* Positioning the icon absolutely within the top bar */
+  right: 35px; /* Positioning the icon 35px from the right */
+  top: 15px; /* Positioning the icon 15px from the top */
+  cursor: pointer; /* Changing cursor to pointer on hover */
+}
+
+/* Styling the search container, including background and layout */
+.search-container {
+  display: flex; /* Displaying elements in a row */
+  align-items: center; /* Aligning items vertically in the center */
+  width: 90%; /* Setting the width of the search container */
+  margin: 20px 0; /* Adding space above and below the container */
+  background-color: #fff; /* Setting a white background color */
+  border-radius: 20px; /* Adding rounded corners */
+  padding: 5px 10px; /* Adding padding inside the container */
+}
+
+/* Styling the search icon within the search container */
+.search-icon {
+  width: 20px; /* Setting the width of the icon */
+  height: 20px; /* Setting the height of the icon */
+  margin-right: 10px; /* Adding space to the right of the icon */
+}
+
+/* Styling the search bar input field */
+.search-bar {
+  width: 100%; /* Setting the search bar to full width */
+  padding: 5px; /* Adding padding inside the input */
+  border: none; /* Removing default border */
+  background: none; /* Setting a transparent background */
+  color: #000; /* Setting text color to black */
+  font-size: 16px; /* Setting the font size */
+}
+
+/* Styling the placeholder text within the search bar */
+.search-bar::placeholder {
+  color: #999; /* Setting a gray color for the placeholder text */
+}
+
+/* Styling the chat list container, making it scrollable */
+.chat-list {
+  flex: 1; /* Allowing the chat list to grow and fill available space */
+  overflow-y: auto; /* Enabling vertical scrolling */
+  margin-top: 10px; /* Adding space above the chat list */
+}
+
+/* Styling each individual chat item in the list */
+.chat-item {
+  display: flex; /* Displaying elements in a row */
+  align-items: center; /* Aligning items vertically in the center */
+  padding: 10px; /* Adding padding inside the chat item */
+  border-bottom: 1px solid #ddd; /* Adding a light gray border below each item */
+}
+
+/* Styling the chat icon (user avatar) within each chat item */
+.chat-icon {
+  width: 50px; /* Setting the width of the icon */
+  height: 50px; /* Setting the height of the icon */
+  border-radius: 50%; /* Making the icon circular */
+  margin-left: 20px; /* Adding space to the left of the icon */
+}
+
+/* Styling the chat info section (name and message) within each chat item */
+.chat-info {
+  flex: 1; /* Allowing the chat info to grow and fill available space */
+}
+
+/* Styling the chat name within the chat info section */
+.chat-name {
+  font-size: 16px; /* Setting the font size */
+  margin-bottom: 15px; /* Adding space below the name */
+  font-weight: bold; /* Making the name bold */
+}
+
+/* Styling the chat message preview within the chat info section */
+.chat-message {
+  font-size: 14px; /* Setting the font size */
+  margin-top: 40px; /* Adding space above the message */
+  margin-left: -115px; /* Adjusting the horizontal position */
+  color: #666; /* Setting the text color to a dark gray */
+}
+
+/* Styling the container for chat time and unread messages */
+.chat-time-unread {
+  display: flex; /* Displaying elements in a column */
+  flex-direction: column; /* Aligning items vertically */
+  align-items: flex-end; /* Aligning items to the right */
+}
+
+/* Styling the chat time within the chat time-unread container */
+.chat-time {
+  font-size: 12px; /* Setting the font size */
+  color: #999; /* Setting the text color to a light gray */
+}
+
+/* Styling the unread message count within the chat time-unread container */
+.chat-unread {
+  background-color: #b39ddb; /* Setting a light purple background color */
+  color: #ffffff; /* Setting the text color to white */
+  border-radius: 10px; /* Adding rounded corners */
+  padding: 2px 6px; /* Adding padding inside the unread message count */
+  font-size: 12px; /* Setting the font size */
+  margin-top: 5px; /* Adding space above the unread message count */
+}
+
+/* Styling the bottom bar that contains navigation icons */
+.bottom-bar {
+  display: flex; /* Displaying elements in a row */
+  justify-content: space-around; /* Distributing the space evenly */
+  padding: 10px 0; /* Adding vertical padding */
+  background-color: #ffffff; /* Setting a white background color */
+  border-top: 1px solid #ddd; /* Adding a light gray border at the top */
+  border-radius: 20px; /* Adding rounded corners */
+  margin: 10px 20px; /* Adding space around the bottom bar */
+}
+
+/* Styling individual icons within the bottom bar */
+.bottom-icon {
+  display: flex; /* Displaying elements in a column */
+  flex-direction: column; /* Aligning items vertically */
+  align-items: center; /* Centering items horizontally */
+  font-size: 14px; /* Setting the font size */
+  color: #666; /* Setting the text color to a dark gray */
+}
+
+/* Styling the icon images within the bottom bar */
+.bottom-icon-image {
+  width: 24px; /* Setting the width of the icon */
+  height: 24px; /* Setting the height of the icon */
+  margin-bottom: 5px; /* Adding space below the icon */
+}
+
+/* Highlighting the active chat icon in the bottom bar */
+.bottom-icon.chats {
+  color: #000; /* Setting the text color to black */
+  font-weight: bold; /* Making the text bold */
+}

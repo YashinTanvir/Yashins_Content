@@ -1,0 +1,151 @@
+/* Defining light mode theme variables */
+body.light {
+  --background-color: #ffffff; /* Background color for light mode */
+  --text-color: #000000; /* Text color for light mode */
+  --input-background: #f0f0f0; /* Background color for input fields in light mode */
+  --button-background: #61DBCC; /* Background color for buttons in light mode */
+  --button-text-color: #ffffff; /* Text color for buttons in light mode */
+}
+
+/* Defining dark mode theme variables */
+body.dark {
+  --background-color: #333333; /* Background color for dark mode */
+  --text-color: #ffffff; /* Text color for dark mode */
+  --input-background: #555555; /* Background color for input fields in dark mode */
+  --button-background: #4A3D57; /* Background color for buttons in dark mode */
+  --button-text-color: #ffffff; /* Text color for buttons in dark mode */
+}
+
+/* Main container for the profile edit page */
+.profile-edit-container {
+  height: 100vh; /* Full height of the viewport */
+  background: var(--background-color); /* Background color based on theme */
+  color: var(--text-color); /* Text color based on theme */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Column direction for stacking elements */
+  align-items: center; /* Center alignment for elements */
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Container for the top bar with back and check icons */
+.top-bar {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between back and check icons */
+  align-items: center; /* Center alignment for icons */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Relative positioning for absolute elements */
+}
+
+/* Styling for the back and check icons */
+.back-icon, .check-icon {
+  width: 24px; /* Icon width */
+  height: 24px; /* Icon height */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Positioning for the back icon */
+.back-icon {
+  position: absolute; /* Absolute positioning */
+  left: 20px; /* Positioned 20px from the left */
+  top: 15px; /* Positioned 15px from the top */
+}
+
+/* Positioning for the check icon */
+.check-icon {
+  position: absolute; /* Absolute positioning */
+  right: 20px; /* Positioned 20px from the right */
+  top: 15px; /* Positioned 15px from the top */
+}
+
+/* Container for the profile picture */
+.profile-pic-container {
+  margin: 20px 0; /* Vertical margin */
+  position: relative; /* Relative positioning for camera icon */
+}
+
+/* Styling for the profile picture */
+.profile-pic {
+  width: 100px; /* Width of the profile picture */
+  height: 100px; /* Height of the profile picture */
+  border-radius: 50%; /* Makes the profile picture circular */
+  background: var(--input-background); /* Background color based on theme */
+}
+
+/* Styling for the camera icon on the profile picture */
+.camera-icon {
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Positioned at the bottom */
+  right: 0; /* Positioned at the right */
+  background: var(--button-background); /* Background color based on theme */
+  color: var(--button-text-color); /* Text color based on theme */
+  border-radius: 50%; /* Makes the camera icon circular */
+  padding: 5px; /* Padding inside the camera icon */
+}
+
+/* Container for input fields */
+.input-container {
+  width: 100%; /* Full width of the container */
+  margin-bottom: 15px; /* Space below each input container */
+}
+
+/* Styling for labels in the input container */
+.input-container label {
+  display: block; /* Displays the label as a block element */
+  margin-bottom: 5px; /* Space below the label */
+}
+
+/* Styling for input fields and textareas */
+.input-container input, .input-container textarea {
+  width: 100%; /* Full width of the input field */
+  padding: 10px; /* Padding inside the input field */
+  background: var(--input-background); /* Background color based on theme */
+  color: var(--text-color); /* Text color based on theme */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+/* Container for the theme toggle button */
+.theme-toggle {
+  margin-top: 20px; /* Space above the theme toggle */
+}
+
+/* Styling for the theme toggle button */
+.theme-toggle button {
+  padding: 10px 20px; /* Padding inside the button */
+  background: var(--button-background); /* Background color based on theme */
+  color: var(--button-text-color); /* Text color based on theme */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for the theme toggle button */
+.theme-toggle button:hover {
+  background: #3a2d45; /* Darker background color on hover */
+}
+
+/* Container for the logout button */
+.logout-container {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center alignment for the logout button */
+  margin-top: 20px; /* Space above the logout container */
+}
+
+/* Styling for the logout button */
+.logout-button {
+  padding: 10px 20px; /* Padding inside the button */
+  background-color: #ff6b6b; /* Red background color */
+  color: white; /* White text color */
+  font-size: 16px; /* Font size of the text */
+  font-weight: bold; /* Bold text */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for the logout button */
+.logout-button:hover {
+  background-color: #e65a5a; /* Darker red background color on hover */
+}

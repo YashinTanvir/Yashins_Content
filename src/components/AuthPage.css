@@ -1,0 +1,164 @@
+/* Centering content both vertically and horizontally within the authentication screen */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Setting full height of the viewport */
+  background-color: #ffffff; /* Applying a white background color */
+  position: relative;
+  overflow: hidden; /* Ensuring that no content overflows the container */
+}
+
+/* Adding a decorative circular background at the bottom of the container */
+.auth-container:before {
+  content: '';
+  position: absolute;
+  bottom: -50px; /* Positioning slightly off-screen at the bottom */
+  width: 150%; /* Extending beyond the container width */
+  height: 300px; /* Setting the height of the decorative element */
+  background-color: #00F0D3; /* Applying a light teal color */
+  border-radius: 50%; /* Creating a circular shape */
+  z-index: 0; /* Placing this element behind the main content */
+}
+
+/* Styling the main content within the container */
+.auth-container > div {
+  background: white; /* Applying a white background for the content box */
+  padding: 40px; /* Adding padding inside the box */
+  border-radius: 10px; /* Adding rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
+  width: 300px; /* Setting a fixed width of the content box */
+  text-align: center; /* Centering the text inside the box */
+  z-index: 1; /* Placing the content above the decorative background */
+}
+
+/* Styling the heading inside the container */
+.auth-container h2 {
+  margin-bottom: 20px; /* Adding space below the heading */
+  font-size: 24px; /* Setting the font size of the heading */
+  color: #4a3d57; /* Applying a dark purple text color */
+}
+
+/* Styling the input fields inside the container */
+.auth-container input {
+  width: 92.75%; /* Setting the width to slightly less than full width */
+  padding: 10px; /* Adding padding inside the input */
+  margin-bottom: 15px; /* Adding space below each input field */
+  border: 1px solid #ddd; /* Applying a light gray border */
+  border-radius: 5px; /* Adding rounded corners */
+}
+
+/* Aligning the password input container with the icon and input */
+.auth-container .password-container {
+  display: flex;
+  align-items: center; /* Aligning items vertically in the center */
+  position: relative; /* Allowing absolute positioning of the eye icon */
+}
+
+/* Adding space inside the password input for the eye icon */
+.auth-container .password-container input {
+  padding-right: 40px; /* Creating room for the eye icon inside the input */
+}
+
+/* Styling the eye icon used to toggle password visibility */
+.auth-container .eye-icon {
+  position: absolute; /* Positioning the icon inside the password container */
+  right: 10px; /* Positioning the icon to the far right */
+  width: 17px; /* Setting the width of the icon */
+  height: 16px; /* Setting the height of the icon */
+  margin-bottom: 12px; /* Aligning the icon vertically within the input */
+  cursor: pointer; /* Changing the cursor to pointer on hover */
+}
+
+/* Styling the container holding login options (like Remember Me and Forgot Password) */
+.auth-container .login-options {
+  display: flex; /* Displaying items in a row */
+  justify-content: space-between; /* Spacing out the items evenly */
+  margin-bottom: 15px; /* Adding space below the login options */
+}
+
+/* Styling the Remember Me checkbox and label */
+.auth-container .login-options .remember-me {
+  display: flex; /* Aligning the checkbox and label side by side */
+  font-size: 12px; /* Setting a small font size for the text */
+  margin-top: 0px; /* Aligning with the surrounding elements */
+}
+
+/* Styling the Remember Me checkbox itself */
+.auth-container .login-options .remember-me input {
+  margin-top: 1px; /* Aligning the checkbox with the text */
+  margin-right: 10px; /* Adding space between the checkbox and the label */
+}
+
+/* Styling the Forgot Password link */
+.auth-container .forgot-password-link {
+  font-size: 12px; /* Setting a small font size */
+  color: #4a3d57; /* Applying a dark purple text color */
+  cursor: pointer; /* Changing the cursor to pointer on hover */
+  margin-top: -15px; /* Adjusting the vertical position */
+  margin-left: 70px; /* Aligning the link with the surrounding elements */
+  background: none; /* Removing the background */
+  border: none; /* Removing the border */
+}
+
+/* Adding an underline effect when hovering over the Forgot Password link */
+.auth-container .forgot-password-link:hover {
+  text-decoration: underline; /* Underlining the text on hover */
+}
+
+/* Styling the submit button */
+.auth-container button {
+  width: 100%; /* Setting the button to full width of the container */
+  padding: 10px; /* Adding padding inside the button */
+  background-color: #26a69a; /* Applying a teal background color */
+  color: white; /* Applying a white text color */
+  border: none; /* Removing the border */
+  border-radius: 5px; /* Adding rounded corners */
+  cursor: pointer; /* Changing the cursor to pointer on hover */
+  margin-top: 10px; /* Adding space above the button */
+}
+
+/* Changing the button background color on hover */
+.auth-container button:hover {
+  background-color: #1e857c; /* Darkening the background color on hover */
+}
+
+/* Styling the error messages */
+.auth-container .error {
+  color: red; /* Applying a red text color */
+  margin-bottom: 10px; /* Adding space below the error message */
+}
+
+/* Styling the container holding the terms and conditions checkbox */
+.terms-container {
+  display: flex; /* Aligning the checkbox and label side by side */
+  justify-content: flex-start; /* Aligning the content to the left */
+  font-size: 12px; /* Setting a small font size */
+  margin-bottom: 20px; /* Adding space below the terms container */
+  margin-left: 270px; /* Aligning the container with the surrounding elements */
+}
+
+/* Styling the terms and conditions checkbox */
+.terms-container input[type="checkbox"] {
+  margin-left: -277px; /* Aligning the checkbox with the surrounding elements */
+}
+
+/* Styling the terms and conditions text */
+.terms-container span {
+  color: #4a3d57; /* Applying a dark purple text color */
+}
+
+/* Adding extra styling for signup input fields */
+.signup-container input {
+  margin-bottom: 10px; /* Adding space below each input field */
+}
+
+/* Setting the font size for all input fields inside the auth container */
+.auth-container input {
+  font-size: 16px; /* Setting a standard font size for all inputs */
+}
+
+/* Setting the font size for input fields inside the password container */
+.password-container input {
+  font-size: 16px; /* Setting a standard font size for password inputs */
+}

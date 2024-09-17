@@ -1,0 +1,189 @@
+/* Container for the chat screen, sets up a vertical layout and applies a background gradient */
+.chat-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient(to right, #1e857c, #ffffff); /* Gradient background from teal to white */
+}
+
+/* Styles for the chat header at the top of the screen */
+.chat-header {
+    display: flex; /* Lays out child elements in a row */
+    justify-content: space-between; /* Spaces out the children evenly */
+    align-items: center; /* Centers items vertically */
+    padding: 20px; /* Adds padding inside the header */
+    background: white; /* White background for the header */
+    border-bottom: 1px solid #ddd; /* Adds a light gray border at the bottom */
+    height: 20px; /* Height of the header */
+}
+
+/* Styles for the back icon in the chat header */
+.chat-back-icon {
+    width: 24px; /* Sets width of the icon */
+    height: 24px; /* Sets height of the icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-top: 0px; /* No margin at the top */
+}
+
+/* Styles for the audio and video icons in the chat header */
+.audio-icon, .video-icon {
+    width: 24px; /* Sets width of the icons */
+    height: 24px; /* Sets height of the icons */
+    margin-left: 15px; /* Adds space between the icons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Container for the chat room's info in the header */
+.chat-info {
+    display: flex; /* Lays out child elements in a row */
+    align-items: center; /* Centers items vertically */
+    flex: 1; /* Takes up remaining space in the header */
+    margin-top: 2px; /* Adds slight margin at the top */
+    margin-left: 40px; /* Adds margin to the left */
+}
+
+/* Styles for the group icon in the chat info */
+.group-icon {
+    width: 24px; /* Sets width of the icon */
+    height: 24px; /* Sets height of the icon */
+    margin-right: 10px; /* Adds space to the right of the icon */
+}
+
+/* Styles for the room name text in the chat info */
+.room-name {
+    font-size: 18px; /* Font size for the room name */
+    margin: 0; /* Removes default margin */
+    color: #4a3d57; /* Dark purple color for the text */
+}
+
+/* Container for the chat messages, allowing scrolling when messages overflow */
+.chat-messages {
+    flex: 1; /* Takes up remaining space in the chat screen */
+    padding: 10px; /* Adds padding inside the container */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Styles for individual chat messages */
+.message {
+    display: flex; /* Lays out child elements in a row */
+    padding: 10px; /* Adds padding inside the message */
+    background: white; /* White background for messages */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Adds space below each message */
+    max-width: 50%; /* Limits the width of messages */
+    word-wrap: break-word; /* Wraps long words to the next line */
+}
+
+/* Styles for sent messages (aligned to the right) */
+.message.sent {
+    align-self: flex-end; /* Aligns the message to the right */
+    background: #DCF8C6; /* Light green background for sent messages */
+    margin-left: auto; /* Adds space to the left, pushing the message to the right */
+    text-align: right; /* Aligns text to the right */
+}
+
+/* Styles for received messages (aligned to the left) */
+.message.received {
+    align-self: flex-start; /* Aligns the message to the left */
+    background: #fff; /* White background for received messages */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Container for the input area where users type their messages */
+.chat-input {
+    display: flex; /* Lays out child elements in a row */
+    align-items: center; /* Centers items vertically */
+    padding: 10px; /* Adds padding inside the container */
+    background: linear-gradient(to right, #1e857c, #ffffff); /* Matches the overall background gradient */
+    border-top: none; /* Removes the top border */
+    box-shadow: none; /* Removes the shadow */
+}
+
+/* Styles for the container that holds the text input and the buttons */
+.chat-input-container {
+    display: flex; /* Lays out child elements in a row */
+    align-items: center; /* Centers items vertically */
+    background-color: white; /* White background for the container */
+    border-radius: 30px; /* Fully rounded corners */
+    width: 100%; /* Full width of the container */
+    padding: 5px 10px; /* Adds padding inside the container */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styles for the plus icon in the input area */
+.plus-icon {
+    width: 24px; /* Sets width of the icon */
+    height: 24px; /* Sets height of the icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-right: 10px; /* Adds space to the right of the icon */
+}
+
+/* Styles for the text input field where users type their messages */
+.chat-input-container input {
+    flex: 1; /* Takes up remaining space in the container */
+    padding: 10px; /* Adds padding inside the input */
+    border: none; /* Removes the border */
+    border-radius: 20px; /* Rounded corners for the input */
+    margin-right: 10px; /* Adds space to the right of the input */
+    outline: none; /* Removes the default outline */
+    font-size: 16px; /* Font size for the text */
+}
+
+/* Styles for the send button in the input area */
+.send-button {
+    background: none; /* Removes the background */
+    border: none; /* Removes the border */
+    font-size: 20px; /* Font size for the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    color: #1e857c; /* Teal color for the button */
+}
+
+/* Container for the formatting options (bold, italic, color) */
+.formatting-options {
+    position: absolute; /* Positions the container absolutely */
+    bottom: 50px; /* Positions the container 50px above the bottom */
+    left: 10px; /* Aligns the container to the left */
+    display: flex; /* Lays out child elements in a column */
+    flex-direction: column; /* Aligns items vertically */
+    background: white; /* White background for the options */
+    border-radius: 5px; /* Rounded corners for the container */
+    padding: 5px; /* Adds padding inside the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 100; /* Ensures the container is above other elements */
+}
+
+/* Styles for each formatting button */
+.format-btn {
+    background: none; /* Removes the background */
+    border: none; /* Removes the border */
+    font-size: 20px; /* Font size for the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin: 5px 0; /* Adds space above and below each button */
+    padding: 5px; /* Adds padding inside each button */
+}
+
+/* Styles for active formatting buttons (when a format is applied) */
+.format-btn.active {
+    background-color: #ddd; /* Light gray background for active buttons */
+    border-radius: 5px; /* Rounded corners for active buttons */
+}
+
+/* Styles for the color picker button */
+.color-picker {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    width: 30px; /* Sets width of the color picker */
+    height: 30px; /* Sets height of the color picker */
+    border: none; /* Removes the border */
+    background: none; /* Removes the background */
+    margin-top: 5px; /* Adds space above the color picker */
+}
+
+/* Styles for the color display circle showing the selected color */
+.color-display {
+    width: 24px; /* Sets width of the color display */
+    height: 24px; /* Sets height of the color display */
+    border-radius: 50%; /* Makes the display circular */
+    border: 1px solid #ddd; /* Adds a light gray border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-top: 5px; /* Adds space above the color display */
+}
